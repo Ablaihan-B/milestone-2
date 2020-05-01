@@ -1,0 +1,62 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelper
+@model Project_Ablaihan.Models.Comments.Comment
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Add</h1>
+
+
+<h1 class="title is-1">Comments</h1>
+
+<h4 class="subtitle is-4">Comments</h4>
+<hr />
+
+<div class="column is-two-fifths">
+    <div class="box">
+        <form asp-action="Add">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="field">
+                <label asp-for="Id" class="control-label"></label>
+                <div class="control">
+                    <input asp-for="Id" class="input" />
+                    <span asp-validation-for="Id" class="has-text-danger"></span>
+                </div>
+            </div>
+
+
+
+            <div class="field">
+                <label asp-for="Text" class="control-label"></label>
+                <div class="control">
+                    <input asp-for="Text" class="input" />
+                    <span asp-validation-for="Text" class="has-text-danger"></span>
+                </div>
+            </div>
+
+
+            <div class="field">
+                <label asp-for="Author" class="control-label"></label>
+                <div class="control">
+                    <input asp-for="Author" class="input" />
+                    <span asp-validation-for="Author" class="has-text-danger"></span>
+                </div>
+            </div>
+
+
+            <div class="field is-grouped">
+                <div class="control">
+                    <button class="button is-link">Submit</button>
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
